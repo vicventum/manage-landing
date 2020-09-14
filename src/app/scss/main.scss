@@ -1,0 +1,21 @@
+// config
+@import "config/variables";
+@import "config/reset"; 
+
+
+// helpers
+// @import "helpers/utilities"; 
+// @import "helpers/mixins"; 
+// @import "helpers/animations"; 
+
+// components
+@import "components/buttons"; 
+@import "components/search"; 
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+
+// views
+@import "views/post";
+@import "views/signin";

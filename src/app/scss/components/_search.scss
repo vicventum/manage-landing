@@ -1,0 +1,19 @@
+.search {
+
+    // FIXME: Doble '&' para ser mas especificos y sobreescribir los estilos de Materialize. Tambien se pudo haber agregado como selector continuo usando uno de materialize
+    & &__container {
+        height: 10rem;
+        float: none;
+        display: flex;
+        margin: 0 auto; 
+
+        input {
+            margin-top: 2.5rem;
+        }
+
+        i {
+            margin-top: 3.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+}
