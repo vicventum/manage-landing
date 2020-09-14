@@ -1,5 +1,6 @@
 // Import CSS
-import "./app/vendor/materialize/materialize.min.css"
+// import "./app/vendor/materialize/materialize.min.css"
+import "./app/vendor/materialize-src/sass/materialize.scss";
 import "./app/scss/main.scss";
 
 // Import JavaScript

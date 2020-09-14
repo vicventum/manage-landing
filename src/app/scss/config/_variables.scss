@@ -1,36 +1,17 @@
-$title-size: var(--title-size);
-$menu-top-size: var(--menu-top-size);
-$menu-bottom-size: var(--menu-bottom-size);
-$shows-size: var(--shows-size);
-$font-size: var(--font-size);
-$min-size: var(--min-size);
-
-$show-size: var(--show-size);
-
-$fw-light: var(--fw-light);
-$fw-normal: var(--fw-normal);
-$fw-bold: var(--fw-bold);
-$line-height: var(--line-height);
+:root {
+  // --- Colors ---
+  // Primary
+  --primary-orange: hsl(12, 88%, 59%);
+  --primary-blue: hsl(228, 39%, 23%);
 
 
-$second-dark: var(--second-dark);
-$max-width: var(--max-width);
-$header-height: var(--header-height);
-$logo-width: var(--logo-width);
-$logo-height: var(--logo-height);
-$logo-spacing: var(--logo-spacing);
+  // Neutral
+  --blue-light: hsl(227, 12%, 61%);
+  --blue-dark: hsl(233, 12%, 13%);
+  --orange-light: hsl(13, 100%, 96%);
+  --gray-light: hsl(0, 0%, 98%);
 
-$h1: var(--h1);
-$h2: var(--h2);
-$h3: var(--h3);
-
-$sp-1: 1rem;
-$sp-2: 2rem;
-$sp-3: 3rem;
-$sp-4: 4rem;
-$sp-5: 5rem;
-
-$spaceamounts: (1,2,3,4,5);
+}
 
 // Breakpoints
 $breakpoints: (

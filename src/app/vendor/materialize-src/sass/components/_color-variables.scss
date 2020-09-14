@@ -1,3 +1,21 @@
+// Custom Colors
+/*
+  $primary-orange: hsl(12, 88%, 59%);
+  $primary-blue: hsl(228, 39%, 23%);
+  $blue-light: hsl(227, 12%, 61%);
+  $blue-dark: hsl(233, 12%, 13%);
+  $orange-light: hsl(13, 100%, 96%);
+  $gray-light: hsl(0, 0%, 98%);
+*/
+
+$primary-orange: ("base": $c1);
+$primary-blue: ("base": $c2);
+$blue-light: ("base": $c3);
+$blue-dark: ("base": $c4);
+$orange-light: ("base": $c5);
+$gray-light: ("base": $c6);
+
+
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
 $materialize-red: (
@@ -331,6 +349,12 @@ $shades: (
 );
 
 $colors: (
+  "primary-orange": $primary-orange,
+  "primary-blue": $primary-blue,
+  "blue-light": $blue-light,
+  "blue-dark": $blue-dark,
+  "orange-light": $orange-light,
+  "gray-light": $gray-light,
   "materialize-red": $materialize-red,
   "red": $red,
   "pink": $pink,
