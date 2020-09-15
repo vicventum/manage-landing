@@ -8658,11 +8658,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--blue-dark);
+  color: var(--primary-blue);
 }
 
 p, span, blockquote {
   color: var(--blue-light);
+  font-size: 1.0625rem;
 }
 
 a, h1, h2, h3, h4, h5, h6 {
@@ -9189,6 +9190,14 @@ a, h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   text-transform: capitalize;
 }
+.hero {
+  margin-top: 100px;
+}
+.hero__img img {
+  -webkit-filter: drop-shadow(0px 3px 2px var(--blue-light));
+          filter: drop-shadow(0px 3px 2px var(--blue-light));
+}
+
 @media (min-width: 993px) {
   .header nav {
     height: auto;

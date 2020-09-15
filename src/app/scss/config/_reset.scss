@@ -8,10 +8,11 @@ body {
     font-family: 'Be Vietnam', sans-serif;
 }
 h1,h2,h3,h4,h5,h6 {
-    color: var(--blue-dark);
+    color: var(--primary-blue);
 }
 p, span, blockquote {
     color: var(--blue-light);
+    font-size: 1.0625rem;
 }
 a, h1,h2,h3,h4,h5,h6 {
     font-weight: $fw-bold;
