@@ -1,8 +1,41 @@
 .hero {
   margin-top: 100px;
 
-  &__img img {
-    filter: drop-shadow(0px 3px 2px var(--blue-light));
-    
+  @include media('<tablet') {
+    margin-top: 50px;
+  }
+
+  &__container {
+    @include media('<tablet') {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__desc {
+    order: 10;
+
+    @include media('<tablet') {
+      text-align: center;
+    }
+  }
+  &__title {
+
+    @include media('<tablet') {
+      margin-top: 10px;
+      font-size: 2.1875rem;
+    }
+  }
+
+  &__img, &__img.important {
+    @include media('<tablet') {
+      width: 80%;
+      margin-right: auto;
+    }
+
+    img {
+      filter: drop-shadow(0px 3px 2px var(--blue-light));
+      
+    }
   }
 }

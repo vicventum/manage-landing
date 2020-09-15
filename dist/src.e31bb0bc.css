@@ -9193,7 +9193,45 @@ a, h1, h2, h3, h4, h5, h6 {
 .hero {
   margin-top: 100px;
 }
-.hero__img img {
+@media (max-width: 599px) {
+  .hero {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 599px) {
+  .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.hero__desc {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
+}
+@media (max-width: 599px) {
+  .hero__desc {
+    text-align: center;
+  }
+}
+@media (max-width: 599px) {
+  .hero__title {
+    margin-top: 10px;
+    font-size: 2.1875rem;
+  }
+}
+@media (max-width: 599px) {
+  .hero__img, .hero__img.important {
+    width: 80%;
+    margin-right: auto;
+  }
+}
+.hero__img img, .hero__img.important img {
   -webkit-filter: drop-shadow(0px 3px 2px var(--blue-light));
           filter: drop-shadow(0px 3px 2px var(--blue-light));
 }

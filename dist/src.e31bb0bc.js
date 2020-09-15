@@ -225,17 +225,15 @@ addEventListener('DOMContentLoaded', function () {
 
   var importants = []; // Encontrando todos los importants
 
-  var _iterator2 = _createForOfIteratorHelper(css.cssRules),
+  var _iterator2 = _createForOfIteratorHelper(css.rules),
       _step2;
 
   try {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
       var el = _step2.value;
 
-      // console.log(el.selectorText);
-      if (el.selectorText !== undefined && el.selectorText.includes('important')) {
-        console.log(el); // Asignando los !importants a los selectores indicados
-
+      if (el.cssText.includes('important')) {
+        // Asignando los !importants a los selectores indicados
         importants.push(el.cssText.replace(/;/g, '!important;'));
       }
     }
@@ -6474,7 +6472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52745" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59426" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

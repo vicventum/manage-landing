@@ -14,10 +14,8 @@ addEventListener('DOMContentLoaded', () => {
 
   
   // Encontrando todos los importants
-  for (const el of css.cssRules){
-    // console.log(el.selectorText);
-    if (el.selectorText !== undefined && el.selectorText.includes('important')) {
-      console.log(el);
+  for (const el of css.rules){
+    if (el.cssText.includes('important')) {
       // Asignando los !importants a los selectores indicados
       importants.push(el.cssText.replace(/;/g, '!important;')) 
     }
