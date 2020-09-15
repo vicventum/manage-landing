@@ -1,0 +1,15 @@
+.bg {
+
+  &--hero {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../../assets/img/bg-simplify-section-desktop.svg');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    
+    
+  }
+}

@@ -9227,4 +9227,14 @@ a, h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
+.bg--hero {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/bg-simplify-section-desktop.c2d9176c.svg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
