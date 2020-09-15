@@ -2,6 +2,7 @@
   // --- Colors ---
   // Primary
   --primary-orange: hsl(12, 88%, 59%);
+  --secondary-orange: hsl(12, 70%, 59%);
   --primary-blue: hsl(228, 39%, 23%);
 
 
@@ -12,6 +13,17 @@
   --gray-light: hsl(0, 0%, 98%);
 
 }
+$primary-orange: hsl(12, 88%, 59%);
+$secondary-orange: hsl(12, 70%, 59%);
+$primary-blue: hsl(228, 39%, 23%);
+$blue-light: hsl(227, 12%, 61%);
+$blue-dark: hsl(233, 12%, 13%);
+$orange-light: hsl(13, 100%, 96%);
+$gray-light: hsl(0, 0%, 98%);
+
+$fw-light: 400;
+$fw-regular: 500;
+$fw-bold: 700;
 
 // Breakpoints
 $breakpoints: (

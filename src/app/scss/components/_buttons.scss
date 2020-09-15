@@ -1,0 +1,12 @@
+.btn {
+  height: auto;
+  padding: 8px 25px;
+  border-radius: 50px;
+  text-transform: capitalize;
+
+  // transition: background-color .3s ease-in-out;
+
+  &:hover {
+    // background-color: var(--secondary-orange);
+  }
+}

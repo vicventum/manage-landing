@@ -202,7 +202,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 addEventListener('DOMContentLoaded', function () {
-  // console.log(document.styleSheets);
+  console.log(document.styleSheets);
   var css; // Comprueba cual es la hoja de estilo principal
 
   var _iterator = _createForOfIteratorHelper(document.styleSheets),
@@ -211,7 +211,11 @@ addEventListener('DOMContentLoaded', function () {
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var i = _step.value;
-      if (i.href.includes('localhost') || i.href.includes('github')) css = i;
+      console.log(i);
+
+      if (i.href !== null && i.href.includes('localhost')) {
+        css = i;
+      }
     }
   } catch (err) {
     _iterator.e(err);
@@ -6470,7 +6474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52528" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52745" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

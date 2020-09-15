@@ -1,11 +1,13 @@
 addEventListener('DOMContentLoaded', () => {
-  // console.log(document.styleSheets);
+  console.log(document.styleSheets);
   let css
 
   // Comprueba cual es la hoja de estilo principal
   for (const i of document.styleSheets) {
-    if (i.href.includes('localhost') || i.href.includes('github'))  
+    console.log(i);
+    if (i.href !== null && i.href.includes('localhost')) {
       css = i
+    }
   }
 
   let importants = []

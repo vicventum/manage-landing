@@ -1,0 +1,49 @@
+.header {
+
+  //TODO: RESET DE MATERILIZE
+  nav {
+    @include media('>=laptop') {
+      height: auto;
+      line-height: auto;
+    }
+  }
+
+  .navbar {
+
+    //TODO: RESET DE MATERILIZE
+    &__links a,
+    .brand-logo,
+    &__btn {
+      @include media('>=laptop') {
+
+        $size: 1rem;
+        padding-top: $size;
+        padding-bottom: $size;
+      }
+    }
+
+    &__content {
+      display: flex;
+    }
+
+    &__links {
+      display: inline-block;
+      margin: 0 auto;
+      align-self: flex-start;
+      // margin-left: -40vw;
+
+      a {
+        font-size: 0.875rem;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: var(--primary-orange) !important;
+        }
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
