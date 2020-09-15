@@ -1,0 +1,9 @@
+// Generals =================
+.g {
+  &-subtitle {
+
+  @include media('>=tablet') {
+      width: 67%;
+  }
+}
+}

@@ -7,12 +7,14 @@
 
 // helpers
 @import "helpers/utilities"; 
+@import "helpers/generals"; 
 // @import "helpers/mixins"; 
 // @import "helpers/animations"; 
 
 // components
 @import "components/buttons"; 
 @import "components/hero"; 
+@import "components/about"; 
 
 // layout
 @import "layout/header";
