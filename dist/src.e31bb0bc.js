@@ -6406,27 +6406,20 @@ M.anime = function () {
   M.Range = t, M.jQueryLoaded && M.initializeJqueryWrapper(t, "range", "M_Range"), t.init(s("input[type=range]"));
 }(cash, M.anime);
 },{"@babel/runtime/helpers/typeof":"../node_modules/@babel/runtime/helpers/typeof.js"}],"app/js/materialize-config.js":[function(require,module,exports) {
-M.AutoInit(); // Slider
+M.AutoInit(); // Carousel
 
-var slider = document.querySelector('.slider');
+var carousel = document.getElementById('carousel');
+M.Carousel.init(carousel, {
+  indicators: true,
+  height: 300
+}); // Slider
+
+var slider = document.getElementById('slider');
 M.Slider.init(slider, {
-  indicators: false,
-  height: 510,
+  indicators: true,
+  height: 150,
   transition: 500,
   interval: 6000
-}); // Autocomplete
-
-var ac = document.querySelector('.autocomplete');
-M.Autocomplete.init(ac, {
-  data: {
-    'Aruba': null,
-    'Cancun Mexico': null,
-    'Hawaii': null,
-    'Florida': null,
-    'California': null,
-    'Jamaica': null,
-    'Islas Las Palmas': null
-  }
 });
 },{}],"app/js/app.js":[function(require,module,exports) {
 
@@ -6472,7 +6465,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59426" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49810" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

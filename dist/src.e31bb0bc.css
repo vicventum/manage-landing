@@ -8655,6 +8655,7 @@ input[type=range]::-ms-thumb {
 /********************* RESET *********************/
 body {
   font-family: "Be Vietnam", sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9692,6 +9693,9 @@ a, h1, h2, h3, h4, h5, h6 {
           filter: drop-shadow(0px 3px 2px var(--blue-light));
 }
 
+.about {
+  height: 100vh;
+}
 @media (max-width: 599px) {
   .about__desc {
     margin-bottom: 40px;
@@ -9713,6 +9717,32 @@ a, h1, h2, h3, h4, h5, h6 {
     z-index: -9999;
     background-color: var(--orange-light);
   }
+}
+
+.testimonials .carousel {
+  height: 250px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.testimonials .carousel .carousel-item {
+  --size: 200;
+  width: calc((400 + var(--size)) * 1px);
+  background-color: var(--gray-light);
+}
+.testimonials .carousel__img, .testimonials .carousel__img.important {
+  width: 50px;
+  margin-top: -25px;
+}
+.testimonials .carousel__title {
+  margin-top: 10px;
+}
+.testimonials .carousel .indicator-item {
+  background-color: #f7d7cf;
+}
+.testimonials .carousel .indicator-item.active {
+  background-color: var(--secondary-orange);
 }
 
 @media (min-width: 993px) {
