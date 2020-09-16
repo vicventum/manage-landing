@@ -1,9 +1,7 @@
 .hero {
   margin-top: 100px;
 
-  @include media('<tablet') {
-    margin-top: 50px;
-  }
+  
 
   &__container {
     @include media('<tablet') {
@@ -14,10 +12,6 @@
 
   &__desc {
     order: 10;
-
-    @include media('<tablet') {
-      text-align: center;
-    }
   }
   &__title {
 

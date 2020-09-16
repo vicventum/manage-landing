@@ -1,16 +1,32 @@
 .about {
 
+  &__desc {
+    @include media('<tablet') {
+      margin-bottom: 40px;
+    }
+  }
   .feature {
 
     &__icon {
       width: 12%!important;
       cursor: default;
       
-      
+      @include media('<tablet') {
+        
+      }
     }
 
     &__title {
       margin-top: 5px;
+
+      @include media('<tablet') {
+        padding: 10px 0 10px 20px;
+        margin-top: 0;
+        margin-left: -20px;
+        position: relative;
+        z-index: $z-last;
+        background-color: var(--orange-light);
+      }
     }
   }
 }

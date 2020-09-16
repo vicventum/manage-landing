@@ -5,3 +5,4 @@
 - [x] Insertar clases para espaciado en negativo
 - [ ] Crear clases .globals para estilos globales
 - [ ] Crear m-py-n y m-my-n
+- [ ] Alineamiento responsive

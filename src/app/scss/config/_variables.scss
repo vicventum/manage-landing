@@ -34,9 +34,4 @@ $breakpoints: (
 ) !default;
 
 // z-index
-$z-index: (
-    tooltip: 100,
-    modal: 500,
-    overlay: 750,
-    offcanvas: 1000
-);
+$z-last: -9999;

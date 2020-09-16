@@ -1,9 +1,22 @@
 // Generals =================
-.g {
+.g, .g.important {
   &-subtitle {
 
-  @include media('>=tablet') {
+    @include media('>=tablet') {
       width: 67%;
+    }
+
   }
-}
+
+  &-section {
+    @include media('<tablet') {
+      margin-top: 50px;
+    }
+  }
+
+  &-desc {
+    @include media('<tablet') {
+      text-align: center;
+    }
+  }
 }
