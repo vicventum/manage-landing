@@ -9693,8 +9693,10 @@ a, h1, h2, h3, h4, h5, h6 {
           filter: drop-shadow(0px 3px 2px var(--blue-light));
 }
 
-.about {
-  height: 100vh;
+@media (min-width: 600px) {
+  .about {
+    height: 100vh;
+  }
 }
 @media (max-width: 599px) {
   .about__desc {
@@ -9719,6 +9721,11 @@ a, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 599px) {
+  .testimonials__btn {
+    margin-top: 30px !important;
+  }
+}
 .testimonials .carousel {
   height: 250px;
   margin-top: 60px;
@@ -9726,10 +9733,26 @@ a, h1, h2, h3, h4, h5, h6 {
   cursor: -webkit-grab;
   cursor: grab;
 }
+@media (max-width: 599px) {
+  .testimonials .carousel {
+    margin-top: 40px;
+  }
+}
 .testimonials .carousel .carousel-item {
   --size: 200;
   width: calc((400 + var(--size)) * 1px);
   background-color: var(--gray-light);
+}
+@media (max-width: 599px) {
+  .testimonials .carousel .carousel-item {
+    width: 90vw;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 349px) {
+  .testimonials .carousel .carousel-item {
+    --size: -70;
+  }
 }
 .testimonials .carousel__img, .testimonials .carousel__img.important {
   width: 50px;
@@ -9740,6 +9763,11 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 .testimonials .carousel .indicator-item {
   background-color: #f7d7cf;
+}
+@media (max-width: 599px) {
+  .testimonials .carousel .indicator-item {
+    bottom: -20px;
+  }
 }
 .testimonials .carousel .indicator-item.active {
   background-color: var(--secondary-orange);

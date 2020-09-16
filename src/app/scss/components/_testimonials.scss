@@ -1,17 +1,37 @@
 .testimonials {
 
+  &__btn {
+    @include media('<tablet') {
+      margin-top: 30px!important;
+    }
+  }
+
+
   .carousel {
     height: 250px;
     margin-top: 60px;
     margin-bottom: 10px;
-
     cursor: grab;
+
+    @include media('<tablet') {
+      margin-top: 40px;
+    }
+
 
     .carousel-item {
       --size: 200;
       width: calc((400 + var(--size)) * 1px);
 
       background-color: var(--gray-light);
+
+      @include media('<tablet') {
+        width: 90vw;
+        padding: 0 20px;
+      }
+
+      @include media('<350px') {
+        --size: -70;
+      }
     }
 
     &__img, &__img.important {
@@ -24,6 +44,10 @@
 
     .indicator-item {
       background-color: lighten($color: $secondary-orange, $amount: 30%);
+
+      @include media('<tablet') {
+        bottom: -20px;
+      }
 
       &.active {
         background-color: var(--secondary-orange);
