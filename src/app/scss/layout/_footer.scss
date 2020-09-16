@@ -1,21 +1,36 @@
 .footer {
   background-color: var(--blue-dark);
 
+  i, a {
+    color: white;
+    cursor: pointer;
+    transition: color .2s ease-in;
+
+    &:hover {
+      color: var(--primary-orange) !important;
+    }
+  }
+
   .social {
     font-size: 1.5em;
-    
+
 
     &__links i {
-      cursor: pointer;
-      transition: color .2s ease-in;
 
-      &:hover {
-        color: var(--primary-orange)!important;
-      }
 
       &:not(:last-of-type) {
         margin-right: 10px;
       }
+    }
+  }
+
+  &__links a {
+    display: block;
+    font-weight: normal;
+
+    &:not(:first-of-type) {
+
+      margin-top: 1em;
     }
   }
 }

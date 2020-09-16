@@ -9852,20 +9852,28 @@ a, h1, h2, h3, h4, h5, h6 {
 .footer {
   background-color: var(--blue-dark);
 }
-.footer .social {
-  font-size: 1.5em;
-}
-.footer .social__links i {
+.footer i, .footer a {
+  color: white;
   cursor: pointer;
   -webkit-transition: color 0.2s ease-in;
   -o-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
 }
-.footer .social__links i:hover {
+.footer i:hover, .footer a:hover {
   color: var(--primary-orange) !important;
+}
+.footer .social {
+  font-size: 1.5em;
 }
 .footer .social__links i:not(:last-of-type) {
   margin-right: 10px;
+}
+.footer__links a {
+  display: block;
+  font-weight: normal;
+}
+.footer__links a:not(:first-of-type) {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
