@@ -9849,4 +9849,23 @@ a, h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
+.footer {
+  background-color: var(--blue-dark);
+}
+.footer .social {
+  font-size: 1.5em;
+}
+.footer .social__links i {
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+.footer .social__links i:hover {
+  color: var(--primary-orange) !important;
+}
+.footer .social__links i:not(:last-of-type) {
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
