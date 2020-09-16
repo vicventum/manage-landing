@@ -1,4 +1,7 @@
 .testimonials {
+  @include media('<tablet') {
+    margin-bottom: 20px!important;
+  }
 
   &__btn {
     @include media('<tablet') {

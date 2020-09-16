@@ -1,0 +1,24 @@
+.banner {
+  background-color: var(--primary-orange);
+  background-image: url(../../assets/img/bg-simplify-section-desktop-modify.svg);
+
+  @include media('<tablet') {
+    text-align: center;
+    background-image: url(../../assets/img/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+
+    &__title {
+      font-size: 3.2em;
+    }
+
+    &__btn {
+      background-color: white;
+      color: var(--primary-orange);
+      float: none!important;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}

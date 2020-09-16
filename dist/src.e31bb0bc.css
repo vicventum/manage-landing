@@ -9722,6 +9722,11 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 599px) {
+  .testimonials {
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 599px) {
   .testimonials__btn {
     margin-top: 30px !important;
   }
@@ -9771,6 +9776,29 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 .testimonials .carousel .indicator-item.active {
   background-color: var(--secondary-orange);
+}
+
+.banner {
+  background-color: var(--primary-orange);
+  background-image: url(/bg-simplify-section-desktop-modify.d6fb4304.svg);
+}
+@media (max-width: 599px) {
+  .banner {
+    text-align: center;
+    background-image: url(/bg-simplify-section-mobile.3fd7d0cb.svg);
+    background-repeat: no-repeat;
+  }
+  .banner__title {
+    font-size: 3.2em;
+  }
+  .banner__btn {
+    background-color: white;
+    color: var(--primary-orange);
+    float: none !important;
+  }
+  .banner__btn:hover {
+    background-color: white;
+  }
 }
 
 @media (min-width: 993px) {
