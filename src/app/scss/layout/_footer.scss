@@ -1,43 +1,100 @@
 .footer {
   background-color: var(--blue-dark);
 
-  
-  i, a {
+  @include media('<laptop') {
+    margin-top: 0 !important;
+  }
+
+
+  &__container {
+
+    @include media('<laptop') {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+  i,
+  a {
     color: white;
     cursor: pointer;
     transition: color .2s ease-in;
-    
+
     &:hover {
       color: var(--primary-orange) !important;
     }
   }
-  
+
   .social {
     font-size: 1.5em;
 
-    
-    &__links i {
-      
+    @include media('<laptop') {
+      order: 10;
+      margin: 2.5em 0;
 
-      &:not(:last-of-type) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo {
+      @include media('<laptop') {
+        order: 10;
+      }
+    }
+
+
+    &__links {
+      @include media('<laptop') {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 1.6em;
+      }
+
+      i:not(:last-of-type) {
         margin-right: 10px;
+      }
+
+    }
+  }
+
+  &__links {
+    @include media('<laptop') {
+      margin-left: 6vw!important;
+    }
+
+    a {
+      display: block;
+      font-weight: normal;
+  
+      &:not(:first-of-type) {
+  
+        margin-top: 1em;
       }
     }
   }
-  
-  &__links a {
-    display: block;
-    font-weight: normal;
-    
-    &:not(:first-of-type) {
-      
-      margin-top: 1em;
+
+  &__form {
+    @include media('<laptop') {
+      order: -1;
     }
   }
-
 
   &__btn {
     padding-top: 5px;
     padding-bottom: 5px;
   }
+
+
+  &__credits {
+    @include media('<laptop') {
+      order: 100;
+      text-align: center;
+      margin-bottom: -1em;
+    }
+  }
+
+
 }

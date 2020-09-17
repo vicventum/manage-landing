@@ -9860,21 +9860,79 @@ input, input.important {
 .footer {
   background-color: var(--blue-dark);
 }
-.footer i, .footer a {
+@media (max-width: 992px) {
+  .footer {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 992px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.footer i,
+.footer a {
   color: white;
   cursor: pointer;
   -webkit-transition: color 0.2s ease-in;
   -o-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
 }
-.footer i:hover, .footer a:hover {
+.footer i:hover,
+.footer a:hover {
   color: var(--primary-orange) !important;
 }
 .footer .social {
   font-size: 1.5em;
 }
+@media (max-width: 992px) {
+  .footer .social {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+    margin: 2.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 992px) {
+  .footer .social__logo {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+}
+@media (max-width: 992px) {
+  .footer .social__links {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 1.6em;
+  }
+}
 .footer .social__links i:not(:last-of-type) {
   margin-right: 10px;
+}
+@media (max-width: 992px) {
+  .footer__links {
+    margin-left: 6vw !important;
+  }
 }
 .footer__links a {
   display: block;
@@ -9883,9 +9941,25 @@ input, input.important {
 .footer__links a:not(:first-of-type) {
   margin-top: 1em;
 }
+@media (max-width: 992px) {
+  .footer__form {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
 .footer__btn {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+@media (max-width: 992px) {
+  .footer__credits {
+    -webkit-box-ordinal-group: 101;
+        -ms-flex-order: 100;
+            order: 100;
+    text-align: center;
+    margin-bottom: -1em;
+  }
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
