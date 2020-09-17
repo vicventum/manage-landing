@@ -8671,6 +8671,14 @@ a, h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+input, input.important {
+  color: var(--blue-light);
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0 1em;
+  font-size: 0.9em;
+}
+
 .m-mall-0, .m.important-mall-0 {
   margin: 0px;
 }
@@ -9874,6 +9882,10 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 .footer__links a:not(:first-of-type) {
   margin-top: 1em;
+}
+.footer__btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */

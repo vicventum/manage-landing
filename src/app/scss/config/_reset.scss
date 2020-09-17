@@ -18,3 +18,10 @@ p, span, blockquote {
 a, h1,h2,h3,h4,h5,h6 {
     font-weight: $fw-bold;
 }
+input, input.important {
+    color: var(--blue-light);
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0 1em;
+    font-size: .9em;
+}
