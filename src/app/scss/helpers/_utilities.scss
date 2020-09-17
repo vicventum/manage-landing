@@ -1,6 +1,17 @@
+// $breakpoints: (
+//     '': 0, // Mantener en 0
+//     m: 320px,
+//     t: 600px,
+//     l: 993px,
+//     d: 1200px
+// );
+// $responsiveSign: \:;
+$limit: 40;
+
+
 .m,.m.important {
     // Clases de paddings y margins ================================================
-    @for $i from 0 through 20 {
+    @for $i from 0 through $limit {
 
         @if round($i / 2)==$i / 2 {
             // Entero
@@ -8,6 +19,15 @@
             $var: ($i / 2) * 10;
 
             // Margin
+            &-mx-#{$var} {
+                margin-left: ($i / 2) * 10px;
+                margin-right: ($i / 2) * 10px;
+            }
+            &-my-#{$var} {
+                margin-top: ($i / 2) * 10px;
+                margin-bottom: ($i / 2) * 10px;
+            }
+
             &-mall-#{$var} {
                 margin: ($i / 2) * 10px;
             }
@@ -46,6 +66,15 @@
 
 
             // Paddins
+            &-px-#{$var} {
+                margin-left: ($i / 2) * 10px;
+                margin-right: ($i / 2) * 10px;
+            }
+            &-py-#{$var} {
+                margin-top: ($i / 2) * 10px;
+                margin-bottom: ($i / 2) * 10px;
+            }
+
             &-pall-#{$var} {
                 padding: ($i / 2) * 10px;
             }
@@ -76,6 +105,15 @@
 
 
             // Margin
+            &-mx-#{$var} {
+                margin-left: ($i / 2) * 10px;
+                margin-right: ($i / 2) * 10px;
+            }
+            &-my-#{$var} {
+                margin-top: ($i / 2) * 10px;
+                margin-bottom: ($i / 2) * 10px;
+            }
+
             &-mall-#{$var} {
                 margin: ($i / 2) * 10px;
             }
@@ -114,6 +152,15 @@
 
 
             // Paddins
+            &-px-#{$var} {
+                margin-left: ($i / 2) * 10px;
+                margin-right: ($i / 2) * 10px;
+            }
+            &-py-#{$var} {
+                margin-top: ($i / 2) * 10px;
+                margin-bottom: ($i / 2) * 10px;
+            }
+
             &-pall-#{$var} {
                 padding: ($i / 2) * 10px;
             }
