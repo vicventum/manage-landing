@@ -2,25 +2,18 @@
 
   //TODO: RESET DE MATERILIZE
   nav {
+    box-shadow: none;
+    margin-top: 1em;
+
     @include media('>=laptop') {
-      height: auto;
-      line-height: auto;
+      margin-top: 0;
+      $size: 110px;
+      height: $size;
+      line-height: $size;
     }
   }
 
   .navbar {
-
-    //TODO: RESET DE MATERILIZE
-    &__links a,
-    .brand-logo,
-    &__btn {
-      @include media('>=laptop') {
-
-        $size: 1rem;
-        padding-top: $size;
-        padding-bottom: $size;
-      }
-    }
 
     &__content {
       display: flex;
@@ -34,9 +27,11 @@
 
       a {
         font-size: 0.875rem;
-        transition: color .3s ease-in-out;
+        transition: color .2s ease-in-out;
+
         &:hover {
           color: var(--primary-orange) !important;
+          background-color: initial;
         }
       }
     }

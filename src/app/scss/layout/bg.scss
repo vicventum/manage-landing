@@ -1,15 +1,29 @@
 .bg {
-
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: $z-last;
+  background-image: url('../../assets/img/bg-tablet-pattern.svg');
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  
   &--hero {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    
+    margin-top: -150px;
+    margin-left: 75px;
+    background-position: right;
 
-    background-image: url('../../assets/img/bg-simplify-section-desktop.svg');
-    background-size: contain;
-    background-position: top;
-    background-repeat: no-repeat;
-    
-    
+  }
+
+  &--about {
+    $size: 350px;
+    margin-top: $size;
+    margin-left: -$size;
+    background-position: left;
+
+    @include media('<tablet') {
+      margin-left: -$size - 0;
+    }
   }
 }
