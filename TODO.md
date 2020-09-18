@@ -4,8 +4,9 @@
 - [x] Insertar clases para espaciado
 - [x] Insertar clases para espaciado en negativo
 - [x] Crear clases .globals para estilos globales
-- [X] Crear m-py-n y m-my-n
-- [ ] Alineamiento, y m-py-n y m-my-n responsive
+- [x] Crear m-py-n y m-my-n
+- [x] Alineamiento, y m-py-n y m-my-n responsive
 - [ ] Crear .js que modifique todos los px a rem en los archivos sass de Materialize
 - [ ] Modificar de px a rem en el archivo _variables.scss en Materialize
 - [ ] Modificar el tamaño de la fuente archivo _typography.scss en Materialize
+- [ ] m-[^h\d]
