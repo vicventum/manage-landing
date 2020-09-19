@@ -21493,16 +21493,22 @@ input, input.important {
   width: 100vw;
   height: 100vh;
   z-index: -9999;
-  background-image: url("/bg-tablet-pattern.7ac05496.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .bg--hero {
+  background-image: url("/bg-tablet-pattern.7ac05496.svg");
   margin-top: -150px;
   margin-left: 75px;
   background-position: right;
 }
+@media (max-width: 599px) {
+  .bg--hero {
+    margin-left: 0;
+  }
+}
 .bg--about {
+  background-image: url("/bg-tablet-pattern.7ac05496.svg");
   margin-top: 350px;
   margin-left: -350px;
   background-position: left;
@@ -21552,7 +21558,7 @@ input, input.important {
     -webkit-box-ordinal-group: 11;
         -ms-flex-order: 10;
             order: 10;
-    margin-top: -10px;
+    margin-top: 2.5rem;
     margin-bottom: 1.2em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21588,7 +21594,7 @@ input, input.important {
 }
 @media (max-width: 992px) {
   .footer__links {
-    margin-left: 6vw !important;
+    margin-left: 1em !important;
   }
 }
 .footer__links a {

@@ -3,20 +3,25 @@
   width: 100vw;
   height: 100vh;
   z-index: $z-last;
-  background-image: url('../../assets/img/bg-tablet-pattern.svg');
+  
   
   background-size: contain;
   background-repeat: no-repeat;
   
   &--hero {
-    
+    background-image: url('../../assets/img/bg-tablet-pattern.svg');
     margin-top: -150px;
     margin-left: 75px;
     background-position: right;
 
+    @include media('<tablet') {
+      margin-left: 0;
+    }
+
   }
 
   &--about {
+    background-image: url('../../assets/img/bg-tablet-pattern.svg');
     $size: 350px;
     margin-top: $size;
     margin-left: -$size;

@@ -213,7 +213,7 @@ addEventListener('DOMContentLoaded', function () {
       var i = _step.value;
       console.log(i);
 
-      if (i.href !== null && i.href.includes('localhost')) {
+      if (i.href !== null && (i.href.includes('localhost') || i.href.includes('github'))) {
         css = i;
       }
     }
