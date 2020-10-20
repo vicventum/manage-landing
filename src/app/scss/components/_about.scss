@@ -1,7 +1,10 @@
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   @include media('>=tablet') {
 
-    height: 100vh;
+    height: 175vh;
   }
 
   &__desc {
@@ -32,5 +35,15 @@
         background-color: var(--orange-light);
       }
     }
+  }
+
+  .intelligent {
+
+    &__img {
+      @include media('<tablet') {
+        width: 80%;
+      }
+    }
+
   }
 }
