@@ -6420,6 +6420,16 @@ M.Slider.init(slider, {
   height: 150,
   transition: 500,
   interval: 6000
+}); // Scrollspy
+
+var sections = document.querySelectorAll('.scrollspy');
+console.log(sections);
+M.ScrollSpy.init(sections, {
+  scrollOffset: 100
+});
+var about = document.getElementById('about');
+M.ScrollSpy.init(about, {
+  scrollOffset: 0
 });
 },{}],"app/js/app.js":[function(require,module,exports) {
 

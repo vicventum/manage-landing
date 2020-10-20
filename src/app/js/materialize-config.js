@@ -15,3 +15,14 @@ M.Slider.init(slider, {
   transition: 500,
   interval: 6000
 })
+
+// Scrollspy
+const sections = document.querySelectorAll('.scrollspy')
+console.log(sections);
+M.ScrollSpy.init(sections, {
+  scrollOffset: 100
+})
+const about = document.getElementById('about')
+M.ScrollSpy.init(about, {
+  scrollOffset: 0,
+})

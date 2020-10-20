@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Font Awesom -->
-  <script src="https://kit.fontawesome.com/a612a0d04c.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/a612a0d04c.js" crossorigin="anonymous"></script> -->
 
 <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
 
@@ -37,15 +37,16 @@
 
           <!-- Desktop menu -->
           <ul class=" hide-on-med-and-down 
-          navbar__content">
+          navbar__content ">
             <div class="navbar__links">
-              <li><a class="blue-dark-text" href="#home">Pricing</a></li>
-              <li><a class="blue-dark-text" href="#search">Product</a></li>
-              <li><a class="blue-dark-text" href="#popular">About Us</a></li>
-              <li><a class="blue-dark-text" href="#gallery">Careers</a></li>
-              <li><a class="blue-dark-text" href="#contact">Community</a></li>
+              <!-- <li><a class="blue-dark-text" href="#home">Pricing</a></li>
+              <li><a class="blue-dark-text" href="#search">Product</a></li> -->
+              <li><a class="blue-dark-text" href="#about">About Us</a></li>
+              <!-- <li><a class="blue-dark-text" href="#gallery">Careers</a></li> -->
+              <li><a class="blue-dark-text" href="#testimonials">Community</a></li>
+              <li><a class="blue-dark-text" href="#banner">Get Started</a></li>
             </div>
-            <li class="navbar__btn"><a href="#" class="waves-effect waves-light btn z-depth-3">Get Started</a></li>
+            <li class="navbar__btn"><a href="#banner" class="waves-effect waves-light btn z-depth-3">Get Started</a></li>
           </ul>
         </div>
       </nav>
@@ -53,12 +54,11 @@
 
     <!-- Mobile menu -->
     <ul id="mobile-nav" class="sidenav">
-      <li><a href="#home">Pricing</a></li>
-      <li><a href="#search">Product</a></li>
-      <li><a href="#popular">About Us</a></li>
-      <li><a href="#gallery">Careers</a></li>
-      <li><a href="#contact">Community</a></li>
-      <li><a href="#" class="waves-effect waves-light btn z-depth-4">Get Started</a></li>
+      <li><a class="sidenav-close blue-dark-text" href="#home">Home</a></li>
+      <li><a class="sidenav-close blue-dark-text" href="#about">About Us</a></li>
+      <li><a class="sidenav-close blue-dark-text" href="#testimonials">Community</a></li>
+      <li><a class="sidenav-close blue-dark-text" href="#banner">Get Started</a></li>
+      <li><a href="#banner" class="sidenav-close waves-effect waves-light btn z-depth-4">Get Started</a></li>
     </ul>
   </header>
 
@@ -77,7 +77,7 @@
           view.
         </p>
 
-        <a href="#" class="waves-effect waves-light btn z-depth-2 m-mt-10">Get Started</a>
+        <a href="#banner" class="waves-effect waves-light btn z-depth-2 m-mt-10">Get Started</a>
       </div>
 
       <!-- hero__img -->
@@ -91,7 +91,7 @@
   <!-- BACKGROUND HERO -->
   <div class="bg bg--about"></div>
   <!-- ABOUT -->
-  <section id="about" class="container about valign-wrapper g-section">
+  <section id="about" class="container about valign-wrapper g-section scrollspy">
     <div class="row
       about__container m-mb-0">
 
@@ -176,10 +176,11 @@
       <div class="col m6 s12">
         <div class="intelligent__desc">
           <h2 class="m-h4 intelligent__title">Intelligent search</h2>
-          <p class="intelligent__text"> 
-            Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks. 
-          </p> 
-          <a href="#" class="btn">More Info</a>
+          <p class="intelligent__text">
+            Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all
+            of your bookmarks.
+          </p>
+          <a href="#banner" class="btn">More Info</a>
         </div>
       </div>
     </div>
@@ -187,7 +188,7 @@
 
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="container g-section testimonials center-align m-mb-100">
+  <section id="testimonials" class="container g-section testimonials center-align m-mb-120 scrollspy">
     <h2 class="m-h4 testimonials__title">What they’ve said</h2>
 
     <!-- Slider -->
@@ -278,14 +279,14 @@
       </div>
     </div>
 
-    <a href="#" class="waves-effect waves-light btn z-depth-2
+    <a href="#banner" class="waves-effect waves-light btn z-depth-2
     testimonials__btn m-mt-5">Get Started</a>
   </section>
 
 
 
   <!-- BANNER -->
-  <section id="banner" class="g-section banner m-pt-50 m-pb-50">
+  <section id="banner" class="g-section banner m-pt-50 m-pb-50 scrollspy">
     <div class="row container m-mb-0">
 
       <h2 class="col m5 s12 m-h4 banner__title white-text">
@@ -293,7 +294,7 @@
       </h2>
 
 
-      <a href="#" class="waves-effect waves-light btn z-depth-2 right m-mt-45
+      <a class="waves-effect waves-light btn z-depth-2 right m-mt-45
         banner__btn">Get Started</a>
 
     </div>
@@ -324,16 +325,16 @@
         footer__links ">
 
         <div class="first col s6">
-          <a href="#">Home</a>
-          <a href="#">Pricing</a>
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
+          <a>Home</a>
+          <a>Pricing</a>
+          <a>Products</a>
+          <a>About Us</a>
         </div>
 
         <div class="second col s6">
-          <a href="#">Careers</a>
-          <a href="#">Community</a>
-          <a href="#">Privacy Policy</a>
+          <a>Careers</a>
+          <a>Community</a>
+          <a>Privacy Policy</a>
         </div>
       </div>
 

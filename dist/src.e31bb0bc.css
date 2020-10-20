@@ -21356,7 +21356,7 @@ input, input.important {
 }
 @media (min-width: 600px) {
   .about {
-    height: 175vh;
+    height: 170vh;
   }
 }
 @media (max-width: 599px) {
