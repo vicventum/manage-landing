@@ -21,7 +21,7 @@ addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  console.log(importants);
+  // console.log(importants);
   // Inserta todos los importants en el DOM
   importants.forEach(el => css.insertRule(el, 0));
 })

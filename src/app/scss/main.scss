@@ -1,4 +1,7 @@
 @import "../../../node_modules/include-media/dist/include-media";
+// Fontello
+@import "../vendor/fontello/css/facebook.css";
+
 
 // config
 @import "config/variables";
@@ -8,8 +11,6 @@
 // helpers
 @import "helpers/utilities"; 
 @import "helpers/generals"; 
-// @import "helpers/mixins"; 
-// @import "helpers/animations"; 
 
 // components
 @import "components/buttons"; 

@@ -8641,6 +8641,64 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+@font-face {
+  font-family: 'facebook';
+  src: url('/facebook.5a9ee458.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'facebook';
+    src: url('../font/facebook.svg?61900930#facebook') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "facebook";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-menu:before { content: '\e0fe'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-pinterest-circled:before { content: '\f0d2'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-facebook-squared:before { content: '\f308'; } /* '' */
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
 :root {
   --primary-orange: hsl(12, 88%, 59%);
@@ -8656,33 +8714,64 @@ input[type=range]::-ms-thumb {
 body {
   font-family: "Be Vietnam", sans-serif;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #f68a6f transparent;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #f68a6f;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 25px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #f57e61;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--primary-blue);
 }
 
-p, span, blockquote {
+p,
+span,
+blockquote {
   color: var(--blue-light);
   font-size: 1.0625rem;
 }
 
-a, h1, h2, h3, h4, h5, h6 {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
-input, input.important {
-  color: var(--blue-light);
-  background-color: white;
-  border-radius: 2rem;
-  padding: 0 1em;
-  font-size: 0.9em;
+input,
+input {
+  color: var(--blue-light) !important;
+  background-color: white !important;
+  border-radius: 2rem !important;
+  padding: 0 1em !important;
+  font-size: 0.9em !important;
 }
 
 @media screen and (min-width: 0) {
   .m-mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .m-my-0 {
     margin-top: 0px;
@@ -8803,8 +8892,8 @@ input, input.important {
     padding-bottom: 5px;
   }
   .m-mx-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
   .m-my-10 {
     margin-top: 10px;
@@ -8925,8 +9014,8 @@ input, input.important {
     padding-bottom: 15px;
   }
   .m-mx-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
   .m-my-20 {
     margin-top: 20px;
@@ -9047,8 +9136,8 @@ input, input.important {
     padding-bottom: 25px;
   }
   .m-mx-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .m-my-30 {
     margin-top: 30px;
@@ -9169,8 +9258,8 @@ input, input.important {
     padding-bottom: 35px;
   }
   .m-mx-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
   .m-my-40 {
     margin-top: 40px;
@@ -9291,8 +9380,8 @@ input, input.important {
     padding-bottom: 45px;
   }
   .m-mx-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
   .m-my-50 {
     margin-top: 50px;
@@ -9413,8 +9502,8 @@ input, input.important {
     padding-bottom: 55px;
   }
   .m-mx-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
   .m-my-60 {
     margin-top: 60px;
@@ -9535,8 +9624,8 @@ input, input.important {
     padding-bottom: 65px;
   }
   .m-mx-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
   .m-my-70 {
     margin-top: 70px;
@@ -9657,8 +9746,8 @@ input, input.important {
     padding-bottom: 75px;
   }
   .m-mx-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
   .m-my-80 {
     margin-top: 80px;
@@ -9779,8 +9868,8 @@ input, input.important {
     padding-bottom: 85px;
   }
   .m-mx-90 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 90px !important;
+    margin-right: 90px !important;
   }
   .m-my-90 {
     margin-top: 90px;
@@ -9901,8 +9990,8 @@ input, input.important {
     padding-bottom: 95px;
   }
   .m-mx-100 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
   }
   .m-my-100 {
     margin-top: 100px;
@@ -10023,8 +10112,8 @@ input, input.important {
     padding-bottom: 105px;
   }
   .m-mx-110 {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 110px !important;
+    margin-right: 110px !important;
   }
   .m-my-110 {
     margin-top: 110px;
@@ -10145,8 +10234,8 @@ input, input.important {
     padding-bottom: 115px;
   }
   .m-mx-120 {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px !important;
+    margin-right: 120px !important;
   }
   .m-my-120 {
     margin-top: 120px;
@@ -10267,8 +10356,8 @@ input, input.important {
     padding-bottom: 125px;
   }
   .m-mx-130 {
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 130px !important;
+    margin-right: 130px !important;
   }
   .m-my-130 {
     margin-top: 130px;
@@ -10389,8 +10478,8 @@ input, input.important {
     padding-bottom: 135px;
   }
   .m-mx-140 {
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 140px !important;
+    margin-right: 140px !important;
   }
   .m-my-140 {
     margin-top: 140px;
@@ -10511,8 +10600,8 @@ input, input.important {
     padding-bottom: 145px;
   }
   .m-mx-150 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
   }
   .m-my-150 {
     margin-top: 150px;
@@ -10633,8 +10722,8 @@ input, input.important {
     padding-bottom: 155px;
   }
   .m-mx-160 {
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 160px !important;
+    margin-right: 160px !important;
   }
   .m-my-160 {
     margin-top: 160px;
@@ -10755,8 +10844,8 @@ input, input.important {
     padding-bottom: 165px;
   }
   .m-mx-170 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 170px !important;
+    margin-right: 170px !important;
   }
   .m-my-170 {
     margin-top: 170px;
@@ -10877,8 +10966,8 @@ input, input.important {
     padding-bottom: 175px;
   }
   .m-mx-180 {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 180px !important;
+    margin-right: 180px !important;
   }
   .m-my-180 {
     margin-top: 180px;
@@ -10999,8 +11088,8 @@ input, input.important {
     padding-bottom: 185px;
   }
   .m-mx-190 {
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 190px !important;
+    margin-right: 190px !important;
   }
   .m-my-190 {
     margin-top: 190px;
@@ -11121,8 +11210,8 @@ input, input.important {
     padding-bottom: 195px;
   }
   .m-mx-200 {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
   }
   .m-my-200 {
     margin-top: 200px;
@@ -11202,8 +11291,8 @@ input, input.important {
 }
 @media screen and (min-width: 320px) {
   .sm-mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .sm-my-0 {
     margin-top: 0px;
@@ -11324,8 +11413,8 @@ input, input.important {
     padding-bottom: 5px;
   }
   .sm-mx-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
   .sm-my-10 {
     margin-top: 10px;
@@ -11446,8 +11535,8 @@ input, input.important {
     padding-bottom: 15px;
   }
   .sm-mx-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
   .sm-my-20 {
     margin-top: 20px;
@@ -11568,8 +11657,8 @@ input, input.important {
     padding-bottom: 25px;
   }
   .sm-mx-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .sm-my-30 {
     margin-top: 30px;
@@ -11690,8 +11779,8 @@ input, input.important {
     padding-bottom: 35px;
   }
   .sm-mx-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
   .sm-my-40 {
     margin-top: 40px;
@@ -11812,8 +11901,8 @@ input, input.important {
     padding-bottom: 45px;
   }
   .sm-mx-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
   .sm-my-50 {
     margin-top: 50px;
@@ -11934,8 +12023,8 @@ input, input.important {
     padding-bottom: 55px;
   }
   .sm-mx-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
   .sm-my-60 {
     margin-top: 60px;
@@ -12056,8 +12145,8 @@ input, input.important {
     padding-bottom: 65px;
   }
   .sm-mx-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
   .sm-my-70 {
     margin-top: 70px;
@@ -12178,8 +12267,8 @@ input, input.important {
     padding-bottom: 75px;
   }
   .sm-mx-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
   .sm-my-80 {
     margin-top: 80px;
@@ -12300,8 +12389,8 @@ input, input.important {
     padding-bottom: 85px;
   }
   .sm-mx-90 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 90px !important;
+    margin-right: 90px !important;
   }
   .sm-my-90 {
     margin-top: 90px;
@@ -12422,8 +12511,8 @@ input, input.important {
     padding-bottom: 95px;
   }
   .sm-mx-100 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
   }
   .sm-my-100 {
     margin-top: 100px;
@@ -12544,8 +12633,8 @@ input, input.important {
     padding-bottom: 105px;
   }
   .sm-mx-110 {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 110px !important;
+    margin-right: 110px !important;
   }
   .sm-my-110 {
     margin-top: 110px;
@@ -12666,8 +12755,8 @@ input, input.important {
     padding-bottom: 115px;
   }
   .sm-mx-120 {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px !important;
+    margin-right: 120px !important;
   }
   .sm-my-120 {
     margin-top: 120px;
@@ -12788,8 +12877,8 @@ input, input.important {
     padding-bottom: 125px;
   }
   .sm-mx-130 {
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 130px !important;
+    margin-right: 130px !important;
   }
   .sm-my-130 {
     margin-top: 130px;
@@ -12910,8 +12999,8 @@ input, input.important {
     padding-bottom: 135px;
   }
   .sm-mx-140 {
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 140px !important;
+    margin-right: 140px !important;
   }
   .sm-my-140 {
     margin-top: 140px;
@@ -13032,8 +13121,8 @@ input, input.important {
     padding-bottom: 145px;
   }
   .sm-mx-150 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
   }
   .sm-my-150 {
     margin-top: 150px;
@@ -13154,8 +13243,8 @@ input, input.important {
     padding-bottom: 155px;
   }
   .sm-mx-160 {
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 160px !important;
+    margin-right: 160px !important;
   }
   .sm-my-160 {
     margin-top: 160px;
@@ -13276,8 +13365,8 @@ input, input.important {
     padding-bottom: 165px;
   }
   .sm-mx-170 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 170px !important;
+    margin-right: 170px !important;
   }
   .sm-my-170 {
     margin-top: 170px;
@@ -13398,8 +13487,8 @@ input, input.important {
     padding-bottom: 175px;
   }
   .sm-mx-180 {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 180px !important;
+    margin-right: 180px !important;
   }
   .sm-my-180 {
     margin-top: 180px;
@@ -13520,8 +13609,8 @@ input, input.important {
     padding-bottom: 185px;
   }
   .sm-mx-190 {
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 190px !important;
+    margin-right: 190px !important;
   }
   .sm-my-190 {
     margin-top: 190px;
@@ -13642,8 +13731,8 @@ input, input.important {
     padding-bottom: 195px;
   }
   .sm-mx-200 {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
   }
   .sm-my-200 {
     margin-top: 200px;
@@ -13723,8 +13812,8 @@ input, input.important {
 }
 @media screen and (min-width: 600px) {
   .mm-mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .mm-my-0 {
     margin-top: 0px;
@@ -13845,8 +13934,8 @@ input, input.important {
     padding-bottom: 5px;
   }
   .mm-mx-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
   .mm-my-10 {
     margin-top: 10px;
@@ -13967,8 +14056,8 @@ input, input.important {
     padding-bottom: 15px;
   }
   .mm-mx-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
   .mm-my-20 {
     margin-top: 20px;
@@ -14089,8 +14178,8 @@ input, input.important {
     padding-bottom: 25px;
   }
   .mm-mx-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .mm-my-30 {
     margin-top: 30px;
@@ -14211,8 +14300,8 @@ input, input.important {
     padding-bottom: 35px;
   }
   .mm-mx-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
   .mm-my-40 {
     margin-top: 40px;
@@ -14333,8 +14422,8 @@ input, input.important {
     padding-bottom: 45px;
   }
   .mm-mx-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
   .mm-my-50 {
     margin-top: 50px;
@@ -14455,8 +14544,8 @@ input, input.important {
     padding-bottom: 55px;
   }
   .mm-mx-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
   .mm-my-60 {
     margin-top: 60px;
@@ -14577,8 +14666,8 @@ input, input.important {
     padding-bottom: 65px;
   }
   .mm-mx-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
   .mm-my-70 {
     margin-top: 70px;
@@ -14699,8 +14788,8 @@ input, input.important {
     padding-bottom: 75px;
   }
   .mm-mx-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
   .mm-my-80 {
     margin-top: 80px;
@@ -14821,8 +14910,8 @@ input, input.important {
     padding-bottom: 85px;
   }
   .mm-mx-90 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 90px !important;
+    margin-right: 90px !important;
   }
   .mm-my-90 {
     margin-top: 90px;
@@ -14943,8 +15032,8 @@ input, input.important {
     padding-bottom: 95px;
   }
   .mm-mx-100 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
   }
   .mm-my-100 {
     margin-top: 100px;
@@ -15065,8 +15154,8 @@ input, input.important {
     padding-bottom: 105px;
   }
   .mm-mx-110 {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 110px !important;
+    margin-right: 110px !important;
   }
   .mm-my-110 {
     margin-top: 110px;
@@ -15187,8 +15276,8 @@ input, input.important {
     padding-bottom: 115px;
   }
   .mm-mx-120 {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px !important;
+    margin-right: 120px !important;
   }
   .mm-my-120 {
     margin-top: 120px;
@@ -15309,8 +15398,8 @@ input, input.important {
     padding-bottom: 125px;
   }
   .mm-mx-130 {
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 130px !important;
+    margin-right: 130px !important;
   }
   .mm-my-130 {
     margin-top: 130px;
@@ -15431,8 +15520,8 @@ input, input.important {
     padding-bottom: 135px;
   }
   .mm-mx-140 {
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 140px !important;
+    margin-right: 140px !important;
   }
   .mm-my-140 {
     margin-top: 140px;
@@ -15553,8 +15642,8 @@ input, input.important {
     padding-bottom: 145px;
   }
   .mm-mx-150 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
   }
   .mm-my-150 {
     margin-top: 150px;
@@ -15675,8 +15764,8 @@ input, input.important {
     padding-bottom: 155px;
   }
   .mm-mx-160 {
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 160px !important;
+    margin-right: 160px !important;
   }
   .mm-my-160 {
     margin-top: 160px;
@@ -15797,8 +15886,8 @@ input, input.important {
     padding-bottom: 165px;
   }
   .mm-mx-170 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 170px !important;
+    margin-right: 170px !important;
   }
   .mm-my-170 {
     margin-top: 170px;
@@ -15919,8 +16008,8 @@ input, input.important {
     padding-bottom: 175px;
   }
   .mm-mx-180 {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 180px !important;
+    margin-right: 180px !important;
   }
   .mm-my-180 {
     margin-top: 180px;
@@ -16041,8 +16130,8 @@ input, input.important {
     padding-bottom: 185px;
   }
   .mm-mx-190 {
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 190px !important;
+    margin-right: 190px !important;
   }
   .mm-my-190 {
     margin-top: 190px;
@@ -16163,8 +16252,8 @@ input, input.important {
     padding-bottom: 195px;
   }
   .mm-mx-200 {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
   }
   .mm-my-200 {
     margin-top: 200px;
@@ -16244,8 +16333,8 @@ input, input.important {
 }
 @media screen and (min-width: 993px) {
   .lm-mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .lm-my-0 {
     margin-top: 0px;
@@ -16366,8 +16455,8 @@ input, input.important {
     padding-bottom: 5px;
   }
   .lm-mx-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
   .lm-my-10 {
     margin-top: 10px;
@@ -16488,8 +16577,8 @@ input, input.important {
     padding-bottom: 15px;
   }
   .lm-mx-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
   .lm-my-20 {
     margin-top: 20px;
@@ -16610,8 +16699,8 @@ input, input.important {
     padding-bottom: 25px;
   }
   .lm-mx-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .lm-my-30 {
     margin-top: 30px;
@@ -16732,8 +16821,8 @@ input, input.important {
     padding-bottom: 35px;
   }
   .lm-mx-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
   .lm-my-40 {
     margin-top: 40px;
@@ -16854,8 +16943,8 @@ input, input.important {
     padding-bottom: 45px;
   }
   .lm-mx-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
   .lm-my-50 {
     margin-top: 50px;
@@ -16976,8 +17065,8 @@ input, input.important {
     padding-bottom: 55px;
   }
   .lm-mx-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
   .lm-my-60 {
     margin-top: 60px;
@@ -17098,8 +17187,8 @@ input, input.important {
     padding-bottom: 65px;
   }
   .lm-mx-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
   .lm-my-70 {
     margin-top: 70px;
@@ -17220,8 +17309,8 @@ input, input.important {
     padding-bottom: 75px;
   }
   .lm-mx-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
   .lm-my-80 {
     margin-top: 80px;
@@ -17342,8 +17431,8 @@ input, input.important {
     padding-bottom: 85px;
   }
   .lm-mx-90 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 90px !important;
+    margin-right: 90px !important;
   }
   .lm-my-90 {
     margin-top: 90px;
@@ -17464,8 +17553,8 @@ input, input.important {
     padding-bottom: 95px;
   }
   .lm-mx-100 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
   }
   .lm-my-100 {
     margin-top: 100px;
@@ -17586,8 +17675,8 @@ input, input.important {
     padding-bottom: 105px;
   }
   .lm-mx-110 {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 110px !important;
+    margin-right: 110px !important;
   }
   .lm-my-110 {
     margin-top: 110px;
@@ -17708,8 +17797,8 @@ input, input.important {
     padding-bottom: 115px;
   }
   .lm-mx-120 {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px !important;
+    margin-right: 120px !important;
   }
   .lm-my-120 {
     margin-top: 120px;
@@ -17830,8 +17919,8 @@ input, input.important {
     padding-bottom: 125px;
   }
   .lm-mx-130 {
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 130px !important;
+    margin-right: 130px !important;
   }
   .lm-my-130 {
     margin-top: 130px;
@@ -17952,8 +18041,8 @@ input, input.important {
     padding-bottom: 135px;
   }
   .lm-mx-140 {
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 140px !important;
+    margin-right: 140px !important;
   }
   .lm-my-140 {
     margin-top: 140px;
@@ -18074,8 +18163,8 @@ input, input.important {
     padding-bottom: 145px;
   }
   .lm-mx-150 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
   }
   .lm-my-150 {
     margin-top: 150px;
@@ -18196,8 +18285,8 @@ input, input.important {
     padding-bottom: 155px;
   }
   .lm-mx-160 {
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 160px !important;
+    margin-right: 160px !important;
   }
   .lm-my-160 {
     margin-top: 160px;
@@ -18318,8 +18407,8 @@ input, input.important {
     padding-bottom: 165px;
   }
   .lm-mx-170 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 170px !important;
+    margin-right: 170px !important;
   }
   .lm-my-170 {
     margin-top: 170px;
@@ -18440,8 +18529,8 @@ input, input.important {
     padding-bottom: 175px;
   }
   .lm-mx-180 {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 180px !important;
+    margin-right: 180px !important;
   }
   .lm-my-180 {
     margin-top: 180px;
@@ -18562,8 +18651,8 @@ input, input.important {
     padding-bottom: 185px;
   }
   .lm-mx-190 {
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 190px !important;
+    margin-right: 190px !important;
   }
   .lm-my-190 {
     margin-top: 190px;
@@ -18684,8 +18773,8 @@ input, input.important {
     padding-bottom: 195px;
   }
   .lm-mx-200 {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
   }
   .lm-my-200 {
     margin-top: 200px;
@@ -18765,8 +18854,8 @@ input, input.important {
 }
 @media screen and (min-width: 1200px) {
   .xlm-mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
   .xlm-my-0 {
     margin-top: 0px;
@@ -18887,8 +18976,8 @@ input, input.important {
     padding-bottom: 5px;
   }
   .xlm-mx-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
   .xlm-my-10 {
     margin-top: 10px;
@@ -19009,8 +19098,8 @@ input, input.important {
     padding-bottom: 15px;
   }
   .xlm-mx-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
   .xlm-my-20 {
     margin-top: 20px;
@@ -19131,8 +19220,8 @@ input, input.important {
     padding-bottom: 25px;
   }
   .xlm-mx-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
   .xlm-my-30 {
     margin-top: 30px;
@@ -19253,8 +19342,8 @@ input, input.important {
     padding-bottom: 35px;
   }
   .xlm-mx-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
   .xlm-my-40 {
     margin-top: 40px;
@@ -19375,8 +19464,8 @@ input, input.important {
     padding-bottom: 45px;
   }
   .xlm-mx-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
   .xlm-my-50 {
     margin-top: 50px;
@@ -19497,8 +19586,8 @@ input, input.important {
     padding-bottom: 55px;
   }
   .xlm-mx-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
   .xlm-my-60 {
     margin-top: 60px;
@@ -19619,8 +19708,8 @@ input, input.important {
     padding-bottom: 65px;
   }
   .xlm-mx-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
   .xlm-my-70 {
     margin-top: 70px;
@@ -19741,8 +19830,8 @@ input, input.important {
     padding-bottom: 75px;
   }
   .xlm-mx-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
   .xlm-my-80 {
     margin-top: 80px;
@@ -19863,8 +19952,8 @@ input, input.important {
     padding-bottom: 85px;
   }
   .xlm-mx-90 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 90px !important;
+    margin-right: 90px !important;
   }
   .xlm-my-90 {
     margin-top: 90px;
@@ -19985,8 +20074,8 @@ input, input.important {
     padding-bottom: 95px;
   }
   .xlm-mx-100 {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
   }
   .xlm-my-100 {
     margin-top: 100px;
@@ -20107,8 +20196,8 @@ input, input.important {
     padding-bottom: 105px;
   }
   .xlm-mx-110 {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 110px !important;
+    margin-right: 110px !important;
   }
   .xlm-my-110 {
     margin-top: 110px;
@@ -20229,8 +20318,8 @@ input, input.important {
     padding-bottom: 115px;
   }
   .xlm-mx-120 {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px !important;
+    margin-right: 120px !important;
   }
   .xlm-my-120 {
     margin-top: 120px;
@@ -20351,8 +20440,8 @@ input, input.important {
     padding-bottom: 125px;
   }
   .xlm-mx-130 {
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 130px !important;
+    margin-right: 130px !important;
   }
   .xlm-my-130 {
     margin-top: 130px;
@@ -20473,8 +20562,8 @@ input, input.important {
     padding-bottom: 135px;
   }
   .xlm-mx-140 {
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 140px !important;
+    margin-right: 140px !important;
   }
   .xlm-my-140 {
     margin-top: 140px;
@@ -20595,8 +20684,8 @@ input, input.important {
     padding-bottom: 145px;
   }
   .xlm-mx-150 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
   }
   .xlm-my-150 {
     margin-top: 150px;
@@ -20717,8 +20806,8 @@ input, input.important {
     padding-bottom: 155px;
   }
   .xlm-mx-160 {
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 160px !important;
+    margin-right: 160px !important;
   }
   .xlm-my-160 {
     margin-top: 160px;
@@ -20839,8 +20928,8 @@ input, input.important {
     padding-bottom: 165px;
   }
   .xlm-mx-170 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 170px !important;
+    margin-right: 170px !important;
   }
   .xlm-my-170 {
     margin-top: 170px;
@@ -20961,8 +21050,8 @@ input, input.important {
     padding-bottom: 175px;
   }
   .xlm-mx-180 {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 180px !important;
+    margin-right: 180px !important;
   }
   .xlm-my-180 {
     margin-top: 180px;
@@ -21083,8 +21172,8 @@ input, input.important {
     padding-bottom: 185px;
   }
   .xlm-mx-190 {
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 190px !important;
+    margin-right: 190px !important;
   }
   .xlm-my-190 {
     margin-top: 190px;
@@ -21205,8 +21294,8 @@ input, input.important {
     padding-bottom: 195px;
   }
   .xlm-mx-200 {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
   }
   .xlm-my-200 {
     margin-top: 200px;
@@ -21425,8 +21514,8 @@ input, input.important {
     --size: -70;
   }
 }
-.testimonials .carousel__img, .testimonials .carousel__img.important {
-  width: 50px;
+.testimonials .carousel__img {
+  width: 50px !important;
   margin-top: -25px;
 }
 .testimonials .carousel__title {
@@ -21479,6 +21568,10 @@ input, input.important {
     line-height: 110px;
   }
 }
+.header .navbar .icon-menu {
+  color: var(--primary-blue);
+  font-size: 1.3rem;
+}
 .header .navbar__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21503,6 +21596,14 @@ input, input.important {
 .header .navbar__btn {
   position: absolute;
   right: 0;
+}
+.header .sidenav li {
+  height: 6em;
+}
+.header .sidenav__link {
+  font-size: 1.2em;
+  height: auto;
+  padding: 1em;
 }
 
 .bg {
@@ -21608,6 +21709,9 @@ input, input.important {
 }
 .footer .social__links i:not(:last-of-type) {
   margin-right: 10px;
+}
+.footer .social__links i::before {
+  margin: 0;
 }
 @media (max-width: 992px) {
   .footer__links {

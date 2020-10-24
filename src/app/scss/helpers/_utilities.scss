@@ -22,8 +22,8 @@ $limit: 40;
         
                     // Margin
                     &-mx-#{$var} {
-                        margin-left: ($i / 2) * 10px;
-                        margin-right: ($i / 2) * 10px;
+                        margin-left: ($i / 2) * 10px!important;
+                        margin-right: ($i / 2) * 10px!important;
                     }
         
                     &-my-#{$var} {

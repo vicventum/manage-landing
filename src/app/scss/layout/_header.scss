@@ -14,6 +14,10 @@
   }
 
   .navbar {
+    .icon-menu {
+      color: var(--primary-blue);
+      font-size: 1.3rem;
+    }
 
     &__content {
       display: flex;
@@ -39,6 +43,18 @@
     &__btn {
       position: absolute;
       right: 0;
+    }
+  }
+
+  .sidenav {
+    li {
+      height: 6em;
+    }
+
+    &__link {
+      font-size: 1.2em;
+      height: auto;
+      padding: 1em;
     }
   }
 }

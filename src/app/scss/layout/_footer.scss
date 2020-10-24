@@ -57,6 +57,9 @@
       i:not(:last-of-type) {
         margin-right: 10px;
       }
+      i::before {
+        margin: 0;
+      }
 
     }
   }

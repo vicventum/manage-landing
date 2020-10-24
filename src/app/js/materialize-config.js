@@ -1,4 +1,6 @@
-M.AutoInit()
+// M.AutoInit()
+const sidenav = document.querySelector('.sidenav')
+M.Sidenav.init(sidenav)
 
 // Carousel
 const carousel = document.getElementById('carousel')
@@ -8,13 +10,13 @@ M.Carousel.init(carousel, {
 })
 
 // Slider
-const slider = document.getElementById('slider')
-M.Slider.init(slider, {
-  indicators: true,
-  height: 150,
-  transition: 500,
-  interval: 6000
-})
+// const slider = document.getElementById('slider')
+// M.Slider.init(slider, {
+//   indicators: true,
+//   height: 150,
+//   transition: 500,
+//   interval: 6000
+// })
 
 // Scrollspy
 const sections = document.querySelectorAll('.scrollspy')

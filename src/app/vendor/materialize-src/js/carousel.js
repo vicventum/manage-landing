@@ -1,3 +1,4 @@
+import Component from "./component"
 (function($) {
   'use strict';
 

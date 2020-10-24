@@ -37,8 +37,8 @@
       }
     }
 
-    &__img, &__img.important {
-      width: 50px;
+    &__img {
+      width: 50px!important;
       margin-top: -25px;
     }
     &__title {
