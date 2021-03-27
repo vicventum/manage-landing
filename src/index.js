@@ -22,4 +22,6 @@ import "../node_modules/materialize-css/js/scrollspy"
 // import "./app/vendor/materialize/materialize.min.js";
 
 import "./app/js/materialize-config";
+
+import "./app/js/lax-config";
 import "./app/js/app";
