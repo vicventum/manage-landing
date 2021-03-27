@@ -1,6 +1,7 @@
 // Import CSS
 // import "./app/vendor/materialize/materialize.min.css"
 import "./app/vendor/materialize-src/sass/materialize.scss";
+import "./app/vendor/sal/sal.css";
 import "./app/scss/main.scss";
 
 // Import JavaScript
@@ -24,4 +25,5 @@ import "../node_modules/materialize-css/js/scrollspy"
 import "./app/js/materialize-config";
 
 import "./app/js/lax-config";
+import "./app/js/sal-config";
 import "./app/js/app";

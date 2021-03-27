@@ -189,6 +189,11 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app/vendor/sal/sal.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app/vendor/fontello/css/facebook.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -4227,19 +4232,23 @@ window.onload = function () {
       translateY: [['elCenterY+200', 'elOutY+00'], [0, -50]]
     }
   }); // About ------------------------------------------------------------------------
+  // lax.addElements('.about__desc, .feature, .intelligent > div', {
+  //     scrollY: {
+  //         opacity: [
+  //           ['elInY', 300],
+  //             [0, 1]
+  //         ]
+  //     }
+  //   })
+  // lax.addElements('.intelligent div:first-child', {
+  //     scrollY: {
+  //         opacity: [
+  //           ['elInY', 'elCenterY-300'],
+  //             [0, 1]
+  //         ]
+  //     }
+  //   })
 
-
-  _lax.default.addElements('.about__desc, .feature, .intelligent > div', {
-    scrollY: {
-      opacity: [['elInY', 300], [0, 1]]
-    }
-  });
-
-  _lax.default.addElements('.intelligent div:first-child', {
-    scrollY: {
-      opacity: [['elInY', 'elCenterY-300'], [0, 1]]
-    }
-  });
 
   _lax.default.addElements('.about__desc, .intelligent div:first-child', {
     scrollY: {
@@ -4256,17 +4265,229 @@ window.onload = function () {
 
   _lax.default.addElements('.carousel', {
     scrollY: {
-      translateY: [['elInY', 'elCenterY-300'], ['100', 0]],
-      opacity: [['elInY', 'elCenterY-300'], [0, 1]]
+      translateY: [['elInY', 'elCenterY-300'], ['100', 0]] // opacity: [
+      //   ['elInY', 'elCenterY-300'],
+      //     [0, 1]
+      // ]
+
     }
   });
 };
-},{"../vendor/laxxx/lax.min":"app/vendor/laxxx/lax.min.js"}],"app/js/app.js":[function(require,module,exports) {
+},{"../vendor/laxxx/lax.min":"app/vendor/laxxx/lax.min.js"}],"../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+},{}],"app/vendor/sal/sal.js":[function(require,module,exports) {
+var define;
+"use strict";
+
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+!function (e, t) {
+  "object" == (typeof exports === "undefined" ? "undefined" : (0, _typeof2.default)(exports)) && "object" == (typeof module === "undefined" ? "undefined" : (0, _typeof2.default)(module)) ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == (typeof exports === "undefined" ? "undefined" : (0, _typeof2.default)(exports)) ? exports.sal = t() : e.sal = t();
+}(void 0, function () {
+  return function () {
+    "use strict";
+
+    var e = {
+      855: function _(e, t, n) {
+        function r(e, t) {
+          var n = Object.keys(e);
+
+          if (Object.getOwnPropertySymbols) {
+            var r = Object.getOwnPropertySymbols(e);
+            t && (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })), n.push.apply(n, r);
+          }
+
+          return n;
+        }
+
+        function o(e) {
+          for (var t = 1; t < arguments.length; t++) {
+            var n = null != arguments[t] ? arguments[t] : {};
+            t % 2 ? r(Object(n), !0).forEach(function (t) {
+              a(e, t, n[t]);
+            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : r(Object(n)).forEach(function (t) {
+              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+            });
+          }
+
+          return e;
+        }
+
+        function a(e, t, n) {
+          return t in e ? Object.defineProperty(e, t, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : e[t] = n, e;
+        }
+
+        n.d(t, {
+          default: function _default() {
+            return E;
+          }
+        });
+
+        var s = "Sal was not initialised! Probably it is used in SSR.",
+            i = "Your browser does not support IntersectionObserver!\nGet a polyfill from here:\nhttps://github.com/w3c/IntersectionObserver/tree/master/polyfill",
+            l = {
+          root: null,
+          rootMargin: "0% 50%",
+          threshold: .5,
+          animateClassName: "sal-animate",
+          disabledClassName: "sal-disabled",
+          enterEventName: "sal:in",
+          exitEventName: "sal:out",
+          selector: "[data-sal]",
+          once: !0,
+          disabled: !1
+        },
+            c = [],
+            u = null,
+            d = function d(e) {
+          e && e !== l && (l = o(o({}, l), e));
+        },
+            f = function f(e) {
+          e.classList.remove(l.animateClassName);
+        },
+            b = function b(e, t) {
+          var n = new CustomEvent(e, {
+            bubbles: !0,
+            detail: t
+          });
+          t.target.dispatchEvent(n);
+        },
+            p = function p() {
+          document.body.classList.add(l.disabledClassName);
+        },
+            m = function m() {
+          u.disconnect(), u = null;
+        },
+            v = function v() {
+          return l.disabled || "function" == typeof l.disabled && l.disabled();
+        },
+            y = function y(e, t) {
+          e.forEach(function (e) {
+            var n = e.target,
+                r = void 0 !== n.dataset.salRepeat,
+                o = void 0 !== n.dataset.salOnce,
+                a = r || !(o || l.once);
+            e.intersectionRatio >= l.threshold ? (function (e) {
+              e.target.classList.add(l.animateClassName), b(l.enterEventName, e);
+            }(e), a || t.unobserve(n)) : a && function (e) {
+              f(e.target), b(l.exitEventName, e);
+            }(e);
+          });
+        },
+            O = function O() {
+          var e = [].filter.call(document.querySelectorAll(l.selector), function (e) {
+            return !function (e) {
+              return e.classList.contains(l.animateClassName);
+            }(e, l.animateClassName);
+          });
+          return e.forEach(function (e) {
+            return u.observe(e);
+          }), e;
+        },
+            h = function h() {
+          p(), m();
+        },
+            g = function g() {
+          document.body.classList.remove(l.disabledClassName), u = new IntersectionObserver(y, {
+            root: l.root,
+            rootMargin: l.rootMargin,
+            threshold: l.threshold
+          }), c = O();
+        },
+            w = function w() {
+          var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          m(), Array.from(document.querySelectorAll(l.selector)).forEach(f), d(e), g();
+        },
+            j = function j() {
+          var e = O();
+          c.push(e);
+        };
+
+        var E = function E() {
+          var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
+          if (d(e), "undefined" == typeof window) return console.warn(s), {
+            elements: c,
+            disable: h,
+            enable: g,
+            reset: w,
+            update: j
+          };
+          if (!window.IntersectionObserver) throw p(), Error(i);
+          return v() ? p() : g(), {
+            elements: c,
+            disable: h,
+            enable: g,
+            reset: w,
+            update: j
+          };
+        };
+      }
+    },
+        t = {};
+
+    function n(r) {
+      if (t[r]) return t[r].exports;
+      var o = t[r] = {
+        exports: {}
+      };
+      return e[r](o, o.exports, n), o.exports;
+    }
+
+    return n.d = function (e, t) {
+      for (var r in t) {
+        n.o(t, r) && !n.o(e, r) && Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t[r]
+        });
+      }
+    }, n.o = function (e, t) {
+      return Object.prototype.hasOwnProperty.call(e, t);
+    }, n(855);
+  }().default;
+});
+},{"@babel/runtime/helpers/typeof":"../node_modules/@babel/runtime/helpers/typeof.js"}],"app/js/sal-config.js":[function(require,module,exports) {
+"use strict";
+
+var _sal = _interopRequireDefault(require("../vendor/sal/sal"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _sal.default)({
+  once: false
+});
+},{"../vendor/sal/sal":"app/vendor/sal/sal.js"}],"app/js/app.js":[function(require,module,exports) {
 
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./app/vendor/materialize-src/sass/materialize.scss");
+
+require("./app/vendor/sal/sal.css");
 
 require("./app/scss/main.scss");
 
@@ -4288,8 +4509,10 @@ require("./app/js/materialize-config");
 
 require("./app/js/lax-config");
 
+require("./app/js/sal-config");
+
 require("./app/js/app");
-},{"./app/vendor/materialize-src/sass/materialize.scss":"app/vendor/materialize-src/sass/materialize.scss","./app/scss/main.scss":"app/scss/main.scss","../node_modules/materialize-css/js/cash":"../node_modules/materialize-css/js/cash.js","../node_modules/materialize-css/js/global":"../node_modules/materialize-css/js/global.js","../node_modules/materialize-css/js/anime.min":"../node_modules/materialize-css/js/anime.min.js","../node_modules/materialize-css/js/carousel":"../node_modules/materialize-css/js/carousel.js","../node_modules/materialize-css/js/waves":"../node_modules/materialize-css/js/waves.js","../node_modules/materialize-css/js/sidenav":"../node_modules/materialize-css/js/sidenav.js","../node_modules/materialize-css/js/scrollspy":"../node_modules/materialize-css/js/scrollspy.js","./app/js/materialize-config":"app/js/materialize-config.js","./app/js/lax-config":"app/js/lax-config.js","./app/js/app":"app/js/app.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./app/vendor/materialize-src/sass/materialize.scss":"app/vendor/materialize-src/sass/materialize.scss","./app/vendor/sal/sal.css":"app/vendor/sal/sal.css","./app/scss/main.scss":"app/scss/main.scss","../node_modules/materialize-css/js/cash":"../node_modules/materialize-css/js/cash.js","../node_modules/materialize-css/js/global":"../node_modules/materialize-css/js/global.js","../node_modules/materialize-css/js/anime.min":"../node_modules/materialize-css/js/anime.min.js","../node_modules/materialize-css/js/carousel":"../node_modules/materialize-css/js/carousel.js","../node_modules/materialize-css/js/waves":"../node_modules/materialize-css/js/waves.js","../node_modules/materialize-css/js/sidenav":"../node_modules/materialize-css/js/sidenav.js","../node_modules/materialize-css/js/scrollspy":"../node_modules/materialize-css/js/scrollspy.js","./app/js/materialize-config":"app/js/materialize-config.js","./app/js/lax-config":"app/js/lax-config.js","./app/js/sal-config":"app/js/sal-config.js","./app/js/app":"app/js/app.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

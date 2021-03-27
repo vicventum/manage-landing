@@ -47,22 +47,22 @@ window.onload = function () {
       }
     })
     // About ------------------------------------------------------------------------
-    lax.addElements('.about__desc, .feature, .intelligent > div', {
-        scrollY: {
-            opacity: [
-              ['elInY', 300],
-                [0, 1]
-            ]
-        }
-      })
-    lax.addElements('.intelligent div:first-child', {
-        scrollY: {
-            opacity: [
-              ['elInY', 'elCenterY-300'],
-                [0, 1]
-            ]
-        }
-      })
+    // lax.addElements('.about__desc, .feature, .intelligent > div', {
+    //     scrollY: {
+    //         opacity: [
+    //           ['elInY', 300],
+    //             [0, 1]
+    //         ]
+    //     }
+    //   })
+    // lax.addElements('.intelligent div:first-child', {
+    //     scrollY: {
+    //         opacity: [
+    //           ['elInY', 'elCenterY-300'],
+    //             [0, 1]
+    //         ]
+    //     }
+    //   })
     lax.addElements('.about__desc, .intelligent div:first-child', {
         scrollY: {
             translateX: [
@@ -87,10 +87,10 @@ window.onload = function () {
             ['elInY', 'elCenterY-300'],
               ['100', 0]
           ],
-          opacity: [
-            ['elInY', 'elCenterY-300'],
-              [0, 1]
-          ]
+          // opacity: [
+          //   ['elInY', 'elCenterY-300'],
+          //     [0, 1]
+          // ]
       }
     })
 }

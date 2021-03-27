@@ -23,7 +23,10 @@
   <div class="bg bg--hero"></div>
 
   <!-- NAVBAR -->
-  <header class="header">
+  <header class="header"
+  data-sal="slide-down"
+  data-sal-duration="1000"
+  >
     <!-- HEADER -->
     <div class="navbar ">
       <nav class="transparent">
@@ -68,20 +71,31 @@
     <div class="row 
       hero__container">
       <!-- hero__desc -->
-      <div class="col m6 s12 hero__desc g-desc">
-        <h2 class="hero__title">Bring everyone together to build better products.</h2>
+      <div class="col m6 s12 hero__desc g-desc"
+      >
+        <div class="sal-wrapper"
+        data-sal="slide-right"
+        data-sal-duration="1000"
+        data-sal-delay="500"
+        data-sal-once="true">
+          <h2 class="hero__title">Bring everyone together to build better products.</h2>
+          <p class="g-subtitle">
+            Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in
+            view.
+          </p>
+          <a href="#banner" class="waves-effect waves-light btn z-depth-2 m-mt-10">Get Started</a>
+        </div>
 
-        <p class="g-subtitle">
-          Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in
-          view.
-        </p>
-
-        <a href="#banner" class="waves-effect waves-light btn z-depth-2 m-mt-10">Get Started</a>
       </div>
 
       <!-- hero__img -->
       <div class="col m6 s12 hero__img">
-        <img src="assets/img/illustration-intro.svg" alt="" class="responsive-img" />
+        <img src="assets/img/illustration-intro.svg" alt="" class="responsive-img" 
+        data-sal="slide-left"
+        data-sal-duration="1000"
+        data-sal-delay="500"
+        data-sal-once="true"
+        />
       </div>
     </div>
 
@@ -89,7 +103,7 @@
 
   <!-- BACKGROUND HERO -->
   <div class="bg bg--about"></div>
-  
+
   <!-- ABOUT -->
   <section id="about" class="container about valign-wrapper g-section scrollspy">
     <div class="row
@@ -98,66 +112,79 @@
       <!-- about__desc -->
       <div class="col m6 s12 g-desc
         about__desc">
-        <h2 class="m-h4 ">What’s different about Manage?</h2>
-
-        <p class="about__p g-subtitle">
-          Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for
-          modern digital product teams.
-        </p>
+        <div class="sal-wrapper"
+        data-sal="fade"
+        data-sal-duration="1000"
+        >
+          <h2 class="m-h4 ">What’s different about Manage?</h2>
+          <p class="about__p g-subtitle">
+            Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for
+            modern digital product teams.
+          </p>
+        </div>
       </div>
 
       <!-- about__features -->
       <div class="col m6 s12
       about__features features">
 
-        <!-- Card 1 -->
-        <div class="row 
-          feature">
-          <span class="col m2 s1 btn
-            feature__icon">01</span>
-
-          <div class="col m10 s10
-            feature__content">
-            <h3 class="m-h6 feature__title">Track company-wide progress</h3>
-
-            <p>
-              See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level
-              all the way done to thesmallest of details. Never lose sight of the bigger picture again.
-            </p>
+        <div class="sal-wrapper"
+        data-sal="fade"
+        data-sal-duration="1000"
+        >
+          <!-- Card 1 -->
+          <div class="row
+            feature">
+            <span class="col m2 s1 btn
+              feature__icon">01</span>
+            <div class="col m10 s10
+              feature__content">
+              <h3 class="m-h6 feature__title">Track company-wide progress</h3>
+              <p>
+                See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level
+                all the way done to thesmallest of details. Never lose sight of the bigger picture again.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="row 
-          feature">
-          <span class="col m2 s1 btn
-            feature__icon">02</span>
-
-          <div class="col m10 s10
-            feature__content">
-            <h3 class="m-h6 feature__title">Advanced built-in reports</h3>
-
-            <p>
-              Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps
-              you build out the reports you need to keep key stakeholders informed.
-            </p>
+        <div class="sal-wrapper"
+        data-sal="fade"
+        data-sal-duration="1000"
+        >
+          <!-- Card 2 -->
+          <div class="row
+            feature">
+            <span class="col m2 s1 btn
+              feature__icon">02</span>
+            <div class="col m10 s10
+              feature__content">
+              <h3 class="m-h6 feature__title">Advanced built-in reports</h3>
+              <p>
+                Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps
+                you build out the reports you need to keep key stakeholders informed.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="row 
-          feature">
-          <span class="col m2 s1 btn
-            feature__icon">03</span>
-
-          <div class="col m10 s10
-            feature__content">
-            <h3 class="m-h6 feature__title">Everything you need in one place</h3>
-
-            <p>
-              Stop jumping from one service to another to communicate, store files, track tasks and share documents.
-              Manage offers an all-in-one team productivity solution.
-            </p>
+        <div class="sal-wrapper"
+        data-sal="fade"
+        data-sal-duration="1000"
+        >
+          <!-- Card 3 -->
+          <div class="row
+            feature">
+            <span class="col m2 s1 btn
+              feature__icon">03</span>
+            <div class="col m10 s10
+              feature__content">
+              <h3 class="m-h6 feature__title">Everything you need in one place</h3>
+              <p>
+                Stop jumping from one service to another to communicate, store files, track tasks and share documents.
+                Manage offers an all-in-one team productivity solution.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -167,13 +194,18 @@
     <div class="row
       intelligent m-my-60 mm-my-0">
 
-      <div class="col m6 s12 center-align">
+      <div class="col m6 s12 center-align"
+      data-sal="fade"
+      data-sal-duration="1000">
 
         <img class=" responsive-img 
           intelligent__img" src="./assets/img/illustration-features-tab-2.svg">
       </div>
 
-      <div class="col m6 s12">
+      <div class="col m6 s12"
+        data-sal="fade"
+        data-sal-duration="1000"
+      >
         <div class="intelligent__desc">
           <h2 class="m-h4 intelligent__title">Intelligent search</h2>
           <p class="intelligent__text">
@@ -234,7 +266,8 @@
     </div> -->
 
     <!-- Carousel -->
-    <div id="carousel" class="carousel valign-wrapper">
+    <div id="carousel" class="carousel valign-wrapper"
+    >
       <div class="carousel-item">
         <img src="./assets/img/avatar-anisha.png" alt="" class="responsive-img 
           carousel__img" />
@@ -283,19 +316,25 @@
     testimonials__btn m-mt-5">Get Started</a>
   </section>
 
-
+  
 
   <!-- BANNER -->
   <section id="banner" class="g-section banner m-pt-50 m-pb-50 scrollspy">
     <div class="row container m-mb-0">
 
-      <h2 class="col m5 s12 m-h4 banner__title white-text">
+      <h2 class="col m5 s12 m-h4 banner__title white-text"
+      data-sal="fade"
+      data-sal-duration="1000">
         Simplify how your team works today.
       </h2>
 
 
       <a class="waves-effect waves-dark btn z-depth-2 right m-mt-45
-        banner__btn">Get Started</a>
+        banner__btn"
+        data-sal="zoom-out"
+        data-sal-duration="1000"
+        data-sal-delay="200"
+        >Get Started</a>
 
     </div>
   </section>
