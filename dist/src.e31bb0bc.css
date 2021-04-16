@@ -8714,6 +8714,10 @@ input[type=range]::-ms-thumb {
 }
 
 /********************* RESET *********************/
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Be Vietnam", sans-serif;
   overflow-x: hidden;

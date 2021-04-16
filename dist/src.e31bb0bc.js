@@ -4265,11 +4265,8 @@ window.onload = function () {
 
   _lax.default.addElements('.carousel', {
     scrollY: {
-      translateY: [['elInY', 'elCenterY-300'], ['100', 0]] // opacity: [
-      //   ['elInY', 'elCenterY-300'],
-      //     [0, 1]
-      // ]
-
+      translateY: [['elInY', 'elCenterY-300'], ['100', 0]],
+      opacity: [['elInY', 'elCenterY-300'], [0, 1]]
     }
   });
 };
@@ -4540,7 +4537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63715" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60133" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

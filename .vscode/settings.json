@@ -1,3 +1,11 @@
 {
-  "svg.preview.background": "custom"
+  "svg.preview.background": "custom",
+  "spellright.language": [
+    "es"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }

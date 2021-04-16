@@ -87,10 +87,10 @@ window.onload = function () {
             ['elInY', 'elCenterY-300'],
               ['100', 0]
           ],
-          // opacity: [
-          //   ['elInY', 'elCenterY-300'],
-          //     [0, 1]
-          // ]
+          opacity: [
+            ['elInY', 'elCenterY-300'],
+              [0, 1]
+          ]
       }
     })
 }
