@@ -4232,23 +4232,25 @@ window.onload = function () {
       translateY: [['elCenterY+200', 'elOutY+00'], [0, -50]]
     }
   }); // About ------------------------------------------------------------------------
-  // lax.addElements('.about__desc, .feature, .intelligent > div', {
-  //     scrollY: {
-  //         opacity: [
-  //           ['elInY', 300],
-  //             [0, 1]
-  //         ]
-  //     }
-  //   })
-  // lax.addElements('.intelligent div:first-child', {
-  //     scrollY: {
-  //         opacity: [
-  //           ['elInY', 'elCenterY-300'],
-  //             [0, 1]
-  //         ]
-  //     }
-  //   })
 
+
+  _lax.default.addElements('.about__desc, .intelligent > div', {
+    scrollY: {
+      opacity: [['elInY', 300], [0, 1]]
+    }
+  });
+
+  _lax.default.addElements('.feature:nth-child(1), .feature:nth-child(2), .feature:nth-child(3)', {
+    scrollY: {
+      opacity: [['elInY', 'elCenterY-200', 'elCenterY+200', 'elOutY'], [0, 1, 1, 0]]
+    }
+  });
+
+  _lax.default.addElements('.intelligent div:first-child', {
+    scrollY: {
+      opacity: [['elInY', 'elCenterY-200', 'elCenterY+200', 'elOutY'], [0, 1, 1, 0]]
+    }
+  });
 
   _lax.default.addElements('.about__desc, .intelligent div:first-child', {
     scrollY: {
@@ -4265,8 +4267,8 @@ window.onload = function () {
 
   _lax.default.addElements('.carousel', {
     scrollY: {
-      translateY: [['elInY', 'elCenterY-300'], ['100', 0]],
-      opacity: [['elInY', 'elCenterY-300'], [0, 1]]
+      translateY: [['elInY', 'elCenterY-250'], ['100', 0]],
+      opacity: [['elInY', 'elCenterY-250', 'elCenterY+250', 'elOutY'], [0, 1, 1, 0]]
     }
   });
 };
